@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://media.twiliocdn.com/sdk/js/client/v1.13/twilio.min.js"></script>
+<script src="sms.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -94,10 +96,14 @@ a {
         <option value="taytay">Taytay</option>
     </select>
 
-    <button type="send" class="registerbtn">Send Messge</button><br><br>
+    <button type="button" id="sendbtn">Send Messge</button><br><br>
     <a class="button" href="home.html">Go back</a>
   </div>
 </form>
-<script src="https://media.twiliocdn.com/sdk/js/client/v1.13/twilio.min.js"></script>
+
+<script>
+  document.getElementById('sendbtn').addEventListener('click', sendMessage)
+</script>
+
 </body>
 </html>
