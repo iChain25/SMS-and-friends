@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/aclc.png">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+        <!-- Login Container -->
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #ffffff ;">
+            <div class="featured-image mb-3">
+                <img src="images/aclc.png" class="img-fluid" style="width: 250px;">
+            </div>
+            <p class="text-black text-center fs-2" style="font-weight: 600;">ACLC College of Taytay Final Project</p>
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-primary w-100 fs-6" id="enterButton">Enter</button> <!-- Add id attribute -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Welcome!</h5>
+                </div>
+                <div class="modal-body">
+                    Redirecting....
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Custom Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Add event listener to the Enter button for click event
+        document.getElementById("enterButton").addEventListener("click", function() {
+            // Show the modal with slide animation when the Enter button is clicked
+            $('#welcomeModal').modal('show').on('shown.bs.modal', function () {
+                $(this).find('.modal-dialog').addClass('slideInRight');
+            });
+            // Redirect to basicinformation.html after 5 seconds
+            setTimeout(function(){
+                window.location.href = "basicinformation.html";
+            }, 5000);
+        });
+    </script>
+
+</body>
+</html>
